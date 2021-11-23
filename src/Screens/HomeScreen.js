@@ -5,7 +5,7 @@ import "./HomeScreen.css"
 
 const HomeScreen = () => {
     return (
-        <div>
+        <div className="products_wrapper">
             {products.map((product) =>(
                 <ProductCard key={product.id} product={product}/>
                 ))}
