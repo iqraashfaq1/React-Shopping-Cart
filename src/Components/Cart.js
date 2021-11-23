@@ -2,9 +2,11 @@ import {useContext} from 'react'
 import "./Cart.css"
 import CartContext from '../Context/cart/CartContext'
 import CartItem from "./CartItem"
+import formatCurrency from "format-currency";
 
 const Cart = () => {
     const { showCart, cartItems, showHideCart } = useContext(CartContext);
+    let opts = { format: "%s%v", symbol: "€" };
     return (
         <div>
             {showCart && (
